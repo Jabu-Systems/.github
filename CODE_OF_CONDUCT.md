@@ -53,9 +53,9 @@ in openbare ruimtes.
 
 ## Handhaving
 
-Misbruik, intimidatie of anderszins onaanvaardbaar gedrag kan worden gemeld bij de
-beheerders via **conduct@burg...** _(placeholder — Jens vult het definitieve
-mailadres in)_. Alle klachten worden snel en eerlijk beoordeeld en onderzocht.
+Misbruik, intimidatie of anderszins onaanvaardbaar gedrag kan **privé** worden gemeld
+bij de organisatiebeheerders van `Jabu-Systems`. Alle klachten worden snel en eerlijk
+beoordeeld en onderzocht.
 
 Alle beheerders zijn verplicht de privacy en veiligheid van de melder te
 respecteren.

@@ -12,9 +12,7 @@ Gebruik bij voorkeur **GitHub Private Vulnerability Reporting**:
 2. Open het tabblad **Security**.
 3. Kies **Report a vulnerability** (onder *Advisories*) en vul het formulier in.
 
-Werkt dat niet, of weet je niet welke repository het betreft? Mail dan naar:
-
-- **security@burg...** _(placeholder — Jens vult het definitieve mailadres in)_
+Weet je niet welke repository het betreft? Gebruik dan de **Security**-tab van de hoofdrepository, of neem privé contact op met een organisatiebeheerder.
 
 Vermeld waar mogelijk:
 
