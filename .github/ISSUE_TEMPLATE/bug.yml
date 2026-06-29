@@ -5,7 +5,7 @@ type: Bug
 labels:
   - needs-investigation
 # projects:
-#   - "Jabu-Systems/1"   # Vul het juiste projectnummer in om issues automatisch toe te voegen.
+#   - "Jabu-Systems/2"   # Ontkommentarieer om nieuwe issues automatisch aan org-board "Jabu" (#2) toe te voegen.
 # assignees: []
 body:
   - type: markdown
