@@ -4,8 +4,8 @@ title: "[Bug]: "
 type: Bug
 labels:
   - needs-investigation
-# projects:
-#   - "Jabu-Systems/2"   # Ontkommentarieer om nieuwe issues automatisch aan org-board "Jabu" (#2) toe te voegen.
+projects:
+  - "Jabu-Systems/2"   # org-board "Jabu-Systems Roadmap" — nieuwe issues hier auto-toevoegen
 # assignees: []
 body:
   - type: markdown
