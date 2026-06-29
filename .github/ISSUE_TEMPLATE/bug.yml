@@ -1,0 +1,141 @@
+name: Bug
+description: Meld een reproduceerbaar defect in een Jabu-Systems applicatie of package.
+title: "[Bug]: "
+type: Bug
+labels:
+  - needs-investigation
+# projects:
+#   - "Jabu-Systems/1"   # Vul het juiste projectnummer in om issues automatisch toe te voegen.
+# assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Bedankt voor je melding. Hoe scherper de reproductie, hoe sneller we het oplossen.
+
+        > **Beveiligingsprobleem?** Maak hier géén openbaar issue van. Volg in plaats daarvan ons [beveiligingsbeleid](https://github.com/Jabu-Systems/.github/blob/main/SECURITY.md).
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: Samenvatting
+      description: Beschrijf het probleem in een paar zinnen.
+      placeholder: Wat gaat er mis?
+    validations:
+      required: true
+
+  - type: dropdown
+    id: app
+    attributes:
+      label: Applicatie / component
+      description: Welk onderdeel is getroffen? Meerdere keuzes mogelijk.
+      multiple: true
+      options:
+        - "app:api"
+        - "app:api-console"
+        - "app:auth-app"
+        - "app:commission-app"
+        - "app:console"
+        - "app:core"
+        - "app:cross-app"
+        - "app:fieldops"
+        - "app:infra"
+        - "app:ops"
+        - "app:web"
+        - "Weet ik niet / anders"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: theme
+    attributes:
+      label: Thema / domein
+      description: Optioneel — bij welk functioneel domein hoort dit?
+      multiple: true
+      options:
+        - "theme:architecture"
+        - "theme:ai"
+        - "theme:auth"
+        - "theme:billing"
+        - "theme:checklists"
+        - "theme:data-sources"
+        - "theme:devices"
+        - "theme:landing"
+        - "theme:lib-refactor"
+        - "theme:notificaties"
+        - "theme:observability"
+        - "theme:onboarding"
+        - "theme:points"
+        - "theme:rapportages"
+    validations:
+      required: false
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproductiestappen
+      description: Stapsgewijs, zodat we het exact kunnen naspelen.
+      value: |
+        1. Ga naar '...'
+        2. Klik op '...'
+        3. Doe '...'
+        4. Zie fout
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Verwacht gedrag
+      description: Wat had er moeten gebeuren?
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Werkelijk gedrag
+      description: Wat gebeurde er in plaats daarvan?
+    validations:
+      required: true
+
+  - type: dropdown
+    id: environment
+    attributes:
+      label: Omgeving
+      description: Waar trad het probleem op?
+      options:
+        - Productie
+        - Staging / acceptatie
+        - Pilot
+        - Lokaal / development
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: Versie / commit / branch
+      description: Indien bekend.
+      placeholder: "bijv. main @ 1b475ed of v1.2.3"
+    validations:
+      required: false
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs, console-output of stacktrace
+      description: Plak relevante output. Dit veld wordt automatisch als code geformatteerd.
+      render: shell
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checklist
+      options:
+        - label: Ik heb gezocht naar bestaande issues en dit is geen duplicaat.
+          required: true
+        - label: Dit is geen beveiligingsprobleem (anders volg ik SECURITY.md).
+          required: true

@@ -1,0 +1,102 @@
+name: Feature
+description: Stel een nieuwe functionaliteit of een verbetering voor.
+title: "[Feature]: "
+type: Feature
+# labels: []          # Area en thema worden hieronder via dropdowns vastgelegd; statische labels worden bij triage gezet.
+# projects:
+#   - "Jabu-Systems/1"   # Vul het juiste projectnummer in om issues automatisch toe te voegen.
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Bedankt voor je voorstel. Beschrijf vooral het **probleem** en de gewenste uitkomst — niet alleen de oplossing.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Probleem / aanleiding
+      description: Welk probleem los je op, of welke behoefte adresseer je? Voor wie?
+      placeholder: "Als <gebruiker> wil ik <doel>, zodat <waarde>."
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Voorgestelde oplossing
+      description: Beschrijf de gewenste functionaliteit of het gedrag.
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatieven en context
+      description: Welke alternatieven heb je overwogen? Relevante links of voorbeelden?
+    validations:
+      required: false
+
+  - type: dropdown
+    id: app
+    attributes:
+      label: Applicatie / component
+      description: Waar landt dit voorstel naar verwachting? Meerdere keuzes mogelijk.
+      multiple: true
+      options:
+        - "app:api"
+        - "app:api-console"
+        - "app:auth-app"
+        - "app:commission-app"
+        - "app:console"
+        - "app:core"
+        - "app:cross-app"
+        - "app:fieldops"
+        - "app:infra"
+        - "app:ops"
+        - "app:web"
+        - "Weet ik niet / nog te bepalen"
+    validations:
+      required: false
+
+  - type: dropdown
+    id: theme
+    attributes:
+      label: Thema / domein
+      description: Bij welk functioneel domein hoort dit? Meerdere keuzes mogelijk.
+      multiple: true
+      options:
+        - "theme:architecture"
+        - "theme:ai"
+        - "theme:auth"
+        - "theme:billing"
+        - "theme:checklists"
+        - "theme:data-sources"
+        - "theme:devices"
+        - "theme:landing"
+        - "theme:lib-refactor"
+        - "theme:notificaties"
+        - "theme:observability"
+        - "theme:onboarding"
+        - "theme:points"
+        - "theme:rapportages"
+    validations:
+      required: false
+
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptatiecriteria
+      description: Waaraan is te zien dat dit af is? Concreet en toetsbaar.
+      value: |
+        - [ ] ...
+        - [ ] ...
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checklist
+      options:
+        - label: Ik heb gezocht naar bestaande issues en dit is geen duplicaat.
+          required: true

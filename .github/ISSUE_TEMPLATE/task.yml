@@ -1,0 +1,86 @@
+name: Task
+description: Een afgebakend stuk werk of een technische taak (geen bug, geen feature-voorstel).
+title: "[Task]: "
+type: Task
+# labels: []          # Area en thema worden hieronder via dropdowns vastgelegd; statische labels worden bij triage gezet.
+# projects:
+#   - "Jabu-Systems/1"   # Vul het juiste projectnummer in om issues automatisch toe te voegen.
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Gebruik dit formulier voor gepland werk, onderhoud (chore), refactors en technische taken.
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Omschrijving
+      description: Wat moet er gebeuren en waarom?
+    validations:
+      required: true
+
+  - type: dropdown
+    id: app
+    attributes:
+      label: Applicatie / component
+      description: Welk onderdeel raakt deze taak? Meerdere keuzes mogelijk.
+      multiple: true
+      options:
+        - "app:api"
+        - "app:api-console"
+        - "app:auth-app"
+        - "app:commission-app"
+        - "app:console"
+        - "app:core"
+        - "app:cross-app"
+        - "app:fieldops"
+        - "app:infra"
+        - "app:ops"
+        - "app:web"
+        - "Weet ik niet / nog te bepalen"
+    validations:
+      required: false
+
+  - type: dropdown
+    id: theme
+    attributes:
+      label: Thema / domein
+      description: Bij welk functioneel domein hoort deze taak? Meerdere keuzes mogelijk.
+      multiple: true
+      options:
+        - "theme:architecture"
+        - "theme:ai"
+        - "theme:auth"
+        - "theme:billing"
+        - "theme:checklists"
+        - "theme:data-sources"
+        - "theme:devices"
+        - "theme:landing"
+        - "theme:lib-refactor"
+        - "theme:notificaties"
+        - "theme:observability"
+        - "theme:onboarding"
+        - "theme:points"
+        - "theme:rapportages"
+    validations:
+      required: false
+
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Definition of Done / subtaken
+      description: Concrete, toetsbare stappen of resultaten.
+      value: |
+        - [ ] ...
+        - [ ] ...
+    validations:
+      required: false
+
+  - type: textarea
+    id: links
+    attributes:
+      label: Gerelateerde issues / context
+      description: Verwijs naar gerelateerde issues, PR's of documentatie.
+      placeholder: "bijv. blokkeert #123, hoort bij #456"
+    validations:
+      required: false

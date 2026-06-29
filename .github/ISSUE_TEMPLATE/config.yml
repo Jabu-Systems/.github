@@ -1,0 +1,10 @@
+# Configuratie voor de issue-templatekiezer.
+# Docs: https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/configuring-issue-templates-for-your-repository
+blank_issues_enabled: false
+contact_links:
+  - name: Vraag of discussie
+    url: https://github.com/orgs/Jabu-Systems/discussions
+    about: Voor algemene vragen, ideeën en discussie die (nog) geen bug, feature of taak zijn.
+  - name: Beveiligingsprobleem melden
+    url: https://github.com/Jabu-Systems/.github/blob/main/SECURITY.md
+    about: Meld kwetsbaarheden privé volgens ons beveiligingsbeleid. Maak hiervoor geen openbaar issue aan.
